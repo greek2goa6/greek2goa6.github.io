@@ -172,7 +172,7 @@ var alpha_epsilon_pi = {
     leadership_value: 4,
     social_value: 2,
     philanthropy_value: 1,
-    homepage: "fratpage/alphaepsilonpi.html"
+    homepage: "fratpage/Alpha Epsilon Pi.html"
 };
 var alpha_epsilon_pi_values = [5, 3, 4, 2, 1];
 
@@ -183,7 +183,8 @@ var sigma_chi = {
     athletics_value: 5,
     leadership_value: 1,
     social_value: 4,
-    philanthropy_value: 2
+    philanthropy_value: 2,
+    homepage: "fratpage/Sigma Chi.html"
 };
 var sigma_chi_values = [3, 5, 1, 4, 2];
 
@@ -194,7 +195,8 @@ var phi_delta_theta = {
     athletics_value: 4,
     leadership_value: 1,
     social_value: 3,
-    philanthropy_value: 5
+    philanthropy_value: 5,
+    homepage: "fratpage/Phi Delta Theta.html"
 };
 var phi_delta_theta_values = [2, 4, 1, 3, 5];
 
@@ -205,7 +207,8 @@ var kappa_sigma = {
     athletics_value: 2,
     leadership_value: 3,
     social_value: 4,
-    philanthropy_value: 5
+    philanthropy_value: 5,
+    homepage: "fratpage/Kappa Sigma.html"
 };
 var kappa_sigma_values = [1, 2, 3, 4, 5];
 
@@ -216,7 +219,8 @@ var beta_theta_pi = {
     athletics_value: 4,
     leadership_value: 5,
     social_value: 2,
-    philanthropy_value: 1
+    philanthropy_value: 1,
+    homepage: "fratpage/Beta Theta Pi.html"
 };
 var beta_theta_pi_values = [3, 4, 5, 2, 1];
 
@@ -227,7 +231,8 @@ var alpha_lambda_mu = {
     athletics_value: 2,
     leadership_value: 5,
     social_value: 5,
-    philanthropy_value: 3
+    philanthropy_value: 3,
+    homepage: "fratpage/Alpha Lambda Mu.html"    
 };
 var alpha_lambda_mu_values = [1, 2, 5, 5, 3];
 
@@ -238,7 +243,8 @@ var lambda_chi_alpha = {
     athletics_value: 4,
     leadership_value: 5,
     social_value: 5,
-    philanthropy_value: 2
+    philanthropy_value: 2,
+    homepage: "fratpage/Lambda Chi Alpha.html"    
 };
 var lambda_chi_alpha_values = [4, 4, 5, 5, 2];
 
@@ -249,7 +255,8 @@ var phi_gamma_delta = {
     athletics_value: 5,
     leadership_value: 1,
     social_value: 4,
-    philanthropy_value: 3
+    philanthropy_value: 3,
+    homepage: "fratpage/Phi Gamma Delta.html"    
 };
 var phi_gamma_delta_values = [2, 5, 1, 4, 3];
 
@@ -260,7 +267,8 @@ var pi_kappa_alpha = {
     athletics_value: 5,
     leadership_value: 1,
     social_value: 5,
-    philanthropy_value: 1
+    philanthropy_value: 1,
+    homepage: "fratpage/Pi Kappa Alpha.html"    
 };
 var pi_kappa_alpha_values = [2, 5, 1, 5, 1];
 
@@ -271,7 +279,8 @@ var sigma_alpha_epsilon = {
     athletics_value: 5,
     leadership_value: 3,
     social_value: 2,
-    philanthropy_value: 4
+    philanthropy_value: 4,
+    homepage: "fratpage/Sigma Alpha Epsilon.html"    
 };
 var sigma_alpha_epsilon_values = [5, 5, 3, 2, 4];
 
@@ -282,7 +291,8 @@ var sigma_alpha_mu = {
     athletics_value: 4,
     leadership_value: 4,
     social_value: 2,
-    philanthropy_value: 1
+    philanthropy_value: 1,
+    homepage: "fratpage/Sigma Alpha Mu.html"    
 };
 var sigma_alpha_mu_values = [3, 4, 4, 2, 1];
 
@@ -293,7 +303,8 @@ var sigma_nu = {
     athletics_value: 1,
     leadership_value: 5,
     social_value: 4,
-    philanthropy_value: 5
+    philanthropy_value: 5,
+    homepage: "fratpage/Sigma Nu.html"    
 };
 var sigma_nu_values = [3, 1, 5, 4, 5];
 
@@ -304,7 +315,8 @@ var sigma_phi_epsilon = {
     athletics_value: 2,
     leadership_value: 1,
     social_value: 4,
-    philanthropy_value: 2
+    philanthropy_value: 2,
+    homepage: "fratpage/Sigma Phi Epsilon.html"    
 };
 var sigma_phi_epsilon_values = [1, 2, 1, 4, 2];
 
@@ -315,7 +327,8 @@ var tau_kappa_epsilon = {
     athletics_value: 1,
     leadership_value: 2,
     social_value: 1,
-    philanthropy_value: 5
+    philanthropy_value: 5,
+    homepage: "fratpage/Tau Kappa Epsilon.html"    
 };
 var tau_kappa_epsilon_values = [1, 1, 2, 1, 5];
 
@@ -326,7 +339,8 @@ var triangle = {
     athletics_value: 2,
     leadership_value: 3,
     social_value: 3,
-    philanthropy_value: 5
+    philanthropy_value: 5,
+    homepage: "fratpage/Triangle.html"    
 };
 var triangle_values = [4, 2, 3, 3, 5];
 
@@ -403,7 +417,9 @@ function findTopThreeFrats() {
         var match_percent = match_decimal * percent;
 
         // STORE FRAT NAME AS KEY AND MATCH PERCENTAGE AS VALUE INTO LOCALSTORAGE
+        // ALLSTON - NEW EDIT
         myStorage.setItem(frats[index].name, match_percent);
+        // myStorage.setItem(frats[index], match_percent);
     }
 }
 
@@ -481,8 +497,14 @@ for (var index = 0; index < top_3; index++) {
     org_name_1.append(container);
 
     // APPEND FRAT NAME AND MATCH PERCENTAGE TO CONTAINER TO BE DISPLAYED ON MATCHES PAGE
+    // ALLSTON - NEW EDIT
     container.append('<div class="name">' + frats_to_values[index][0] +'</div>');
+    // container.append('<div class="name">' + frats_to_values[index][0].name +'</div>');
+
     container.append('<div class="match_percentage">' + "Match Percentage: " + frats_to_values[index][1] + "%" + '</div>');
+
+    // ALLSTON - NEW EDIT
+    container.append('<a href="fratpage/' + frats_to_values[index][0] + '.html"> Visit Fraternity Page' + '</a>');    
 }
 
 
@@ -502,5 +524,8 @@ for (var index = 0; index < frats.length; index++) {
     // APPEND FRAT NAME AND MATCH PERCENTAGE TO CONTAINER TO BE DISPLAYED ON EXPLORE PAGE
     container.append('<div class="name">' + frats_to_values[index][0] +'</div>');
     container.append('<div class="match_percentage">' + "Match Percentage: " + frats_to_values[index][1] + "%" + '</div>');
+
+    // ALLSTON - NEW EDIT
+    container.append('<a href="fratpage/' + frats_to_values[index][0] + '.html"> Visit Fraternity Page' + '</a>');    
 }
 /* ALLSTON: EDITS END HERE */
