@@ -396,7 +396,7 @@ function addToCarousel(eventToAdd) {
 //CHECK EVENT LIST TO SEE IF EVENT HAS ALREADY BEEN ADDED
   else {
     for (index = 0; index < num_events; index++) {
-      if (eventToAdd == carousel_events[index]) {
+      if (eventToAdd.title == carousel_events[index].title) {
         isInArray = true;
       }
     }
