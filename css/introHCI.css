@@ -323,7 +323,7 @@ i {
 
 /* OPEN BUTTON CLASS CSS */
 .openbtn {
-    width: 10%;
+    width: inherit;
     font-size: 20px;
     cursor: pointer;
     background-color: #111;

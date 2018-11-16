@@ -34,11 +34,11 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #005e94;
+  color: #ffcf00;
   padding: 14px 20px;
   margin: 8px 0;
-	border: none;
+  border: none;
   cursor: pointer;
   width: 100%;
 }
